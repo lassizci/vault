@@ -288,9 +288,9 @@ func (c *Core) newCredentialBackend(
 	}
 
 	config := &logical.BackendConfig{
-		View:   view,
-		Logger: c.logger,
-		Config: conf,
+		StorageView: view,
+		Logger:      c.logger,
+		Config:      conf,
 	}
 
 	b, err := f(config)
